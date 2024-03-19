@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: e2e-tests-parent-image-from-registry-rh-io-zvua
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: e2e-tests-parent-image-from-registry-rh-io-zvua
+    app.kubernetes.io/part-of: test-app-887
+  name: e2e-tests-parent-image-from-registry-rh-io-zvua
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: e2e-tests-parent-image-from-registry-rh-io-zvua
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: e2e-tests-parent-image-from-registry-rh-io-zvua
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        ports:
+        - containerPort: 8081
+        resources: {}
+status: {}
