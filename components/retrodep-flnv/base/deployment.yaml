@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: retrodep-flnv
     spec:
       containers:
-      - image: retrodep:latest
+      - image: quay.io/redhat-user-workloads/build-templates-e2e/test-app-887/retrodep-flnv@sha256:002173663666b100c3e5475f524bba910425465f04a7628d14da7dad433b58f3
         name: my-retrodep
         ports:
         - containerPort: 8081
