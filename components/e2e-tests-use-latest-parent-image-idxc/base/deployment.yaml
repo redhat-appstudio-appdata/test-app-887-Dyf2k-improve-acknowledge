@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: e2e-tests-use-latest-parent-image-idxc
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/build-templates-e2e/test-app-887/e2e-tests-use-latest-parent-image-idxc@sha256:a8f97da95363457957265acd158fab16b265ba595f127a5f95dd9188c61241f9
         imagePullPolicy: Always
         name: container-image
         ports:
